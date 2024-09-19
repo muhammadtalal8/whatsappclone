@@ -46,6 +46,12 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
               icon: const Icon(Icons.more_vert)),
         ],
       ),
+      body: Column(
+        children: [
+          Expanded(child: Text('message')),
+          Flexible(child: TextFormField()),
+        ],
+      ),
     );
   }
 }
