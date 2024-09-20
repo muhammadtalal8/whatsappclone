@@ -1,6 +1,5 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
+import 'package:firstappp/message_page.dart';
 
 class ChatDetailPage extends StatefulWidget {
   const ChatDetailPage({super.key});
@@ -19,7 +18,6 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         title: const Row(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('images/bird-8788491_1280.webp'),
               radius: 15,
             ),
             Padding(
@@ -48,8 +46,32 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
       ),
       body: Column(
         children: [
-          Expanded(child: Text('message')),
-          Flexible(child: TextFormField()),
+          const Expanded(child: MessagePage()),
+          Container(
+            alignment: Alignment.bottomCenter,
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              children: [
+                Flexible(
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 5,
+                    decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(50),
+                            borderSide: const BorderSide(
+                                color: Colors.red, width: 2.0)),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50),
+                          borderSide:
+                              const BorderSide(color: Colors.red, width: 2.0),
+                        ),
+                        hintText: 'Type a message'),
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -15,7 +15,7 @@ List<ChatModel> chatData = [
       name: "Talal",
       message: "Hello",
       time: "9:42",
-      avatar: "lib/images/bird.webp"),
+      avatar: "images/bird.webp"),
   ChatModel(
-      name: "Nabeel", message: "Hi", time: "10:14", avatar: "images/bird.webp"),
+      name: "Nabeel", message: "Hi", time: "10:14", avatar: "images/tree.jpg"),
 ];

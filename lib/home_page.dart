@@ -1,3 +1,4 @@
+import 'package:firstappp/call_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firstappp/chat_page.dart';
 
@@ -16,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage>
   late TabController _tabController;
   final List<Tab> topTabs = <Tab>[
     const Tab(
-      icon: Icon(Icons.camera_alt),
+      icon: Icon(Icons.camera_alt_sharp),
     ),
     const Tab(text: 'CHATS'),
     const Tab(text: 'STATUS'),
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage>
             Text('camera'),
             ChatPage(),
             Text('Status'),
-            Text('Call'),
+            CallPage()
           ],
         ));
   }
