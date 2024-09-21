@@ -27,16 +27,24 @@ class _CallPageState extends State<CallPage> {
                     callData[i].name,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  // subtitle: Text(
-                  //   // callData[i].message,
-                  //   style: const TextStyle(color: Colors.grey, fontSize: 15.0),
-                  // ),
-                  trailing: (Icon(
+                  subtitle: Row(
+                    children: [
+                      Container(
+                        child: callData[i].calltype,
+                      ),
+                      Text(
+                        callData[i].time,
+                        style:
+                            const TextStyle(color: Colors.grey, fontSize: 15.0),
+                      )
+                    ],
+                  ),
+                  trailing: const Icon(
                     Icons.call,
                     size: 25,
-                    color: Theme.of(context).primaryColor,
-                  )),
+                  ),
                   onTap: () {
+                    // ignore: avoid_print
                     print('Call Detail Open');
                   },
                 )

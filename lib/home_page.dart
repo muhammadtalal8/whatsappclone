@@ -1,4 +1,5 @@
 import 'package:firstappp/call_page.dart';
+import 'package:firstappp/status_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firstappp/chat_page.dart';
 
@@ -38,35 +39,69 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  // ignore: avoid_print
-                  print("search button clicked");
-                },
-                icon: const Icon(Icons.search)),
-            IconButton(
-                onPressed: () {
-                  // ignore: avoid_print
-                  print("Three Dot Button Clicked");
-                },
-                icon: const Icon(Icons.more_vert))
-          ],
-          bottom: TabBar(
-              controller: _tabController,
-              indicatorColor: Colors.red,
-              tabs: topTabs),
-        ),
-        body: TabBarView(
-          controller: _tabController,
-          children: const [
-            Text('camera'),
-            ChatPage(),
-            Text('Status'),
-            CallPage()
-          ],
-        ));
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: [
+          IconButton(
+              onPressed: () {
+                // ignore: avoid_print
+                print("search button clicked");
+              },
+              icon: const Icon(Icons.search)),
+          IconButton(
+              onPressed: () {
+                // ignore: avoid_print
+                print("Three Dot Button Clicked");
+              },
+              icon: const Icon(Icons.more_vert))
+        ],
+        bottom: TabBar(
+            controller: _tabController,
+            indicatorColor: Colors.red,
+            tabs: topTabs),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: const [
+          Text(
+            'camera',
+          ),
+          ChatPage(),
+          StatusPage(),
+          CallPage()
+        ],
+      ),
+      floatingActionButton: _getFAB(),
+    );
+  }
+
+  _getFAB() {
+    if (_tabController.index == 1) {
+      return FloatingActionButton(
+          backgroundColor: const Color.fromARGB(255, 4, 246, 129),
+          child: Icon(
+            Icons.message,
+            color: Colors.white,
+          ),
+          onPressed: () => print('Open Chat'));
+    } else if (_tabController.index == 2) {
+      return FloatingActionButton(
+          backgroundColor: const Color.fromARGB(255, 4, 246, 129),
+          child: Icon(
+            Icons.camera_alt,
+            color: Colors.white,
+          ),
+          onPressed: () => print('Open Camera'));
+    } else if (_tabController.index == 3) {
+      return FloatingActionButton(
+          backgroundColor: const Color.fromARGB(255, 4, 246, 129),
+          child: Icon(
+            Icons.call,
+            color: Colors.white,
+          ),
+          onPressed: () => print('Open Call'));
+    } else {
+      return null;
+    }
   }
 }

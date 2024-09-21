@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:firstappp/message_page.dart';
 
@@ -29,11 +31,15 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         actions: [
           IconButton(
               onPressed: () {
+                // ignore: duplicate_ignore
+                // ignore: avoid_print
                 print("video call button Clicked");
               },
               icon: const Icon(Icons.video_call)),
           IconButton(
               onPressed: () {
+                // ignore: duplicate_ignore
+                // ignore: avoid_print
                 print("call button Clicked");
               },
               icon: const Icon(Icons.call)),

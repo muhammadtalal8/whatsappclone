@@ -36,4 +36,40 @@ List<CallModel> callData = [
     avatar: "images/tree.jpg",
     calltype: CallModel.callMissed,
   ),
+  CallModel(
+    name: "Bilal",
+    calltype: CallModel.callReceived,
+    time: "2:34",
+    avatar: "images/bird.webp",
+  ),
+  CallModel(
+    name: "Hamza",
+    time: "10:22",
+    avatar: "images/tree.jpg",
+    calltype: CallModel.callMissed,
+  ),
+  CallModel(
+    name: "Saad",
+    calltype: CallModel.callMissed,
+    time: "2:56",
+    avatar: "images/tree.jpg",
+  ),
+  CallModel(
+    name: "khanjee",
+    calltype: CallModel.callReceived,
+    time: "10:00",
+    avatar: "images/bird.webp",
+  ),
+  CallModel(
+    name: "Ali",
+    calltype: CallModel.callMissed,
+    time: "11:00",
+    avatar: "images/tree.jpg",
+  ),
+  CallModel(
+    name: "fahad",
+    calltype: CallModel.callReceived,
+    time: "12:00",
+    avatar: "images/bird.webp",
+  ),
 ];

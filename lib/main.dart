@@ -13,7 +13,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WHATSAPP',
-      theme: ThemeData(primaryColor: const Color.fromARGB(255, 1, 58, 31)),
+      theme: ThemeData(
+          primaryColor: const Color(
+            0xff075e54,
+          ),
+          tabBarTheme: const TabBarTheme(
+              labelColor: Colors.white, indicatorColor: Colors.white),
+          bottomAppBarTheme: const BottomAppBarTheme(
+              color: Colors.white,
+              surfaceTintColor: Colors.white,
+              shadowColor: Colors.white),
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Color(
+                0xFD013A1F,
+              ),
+              foregroundColor: Colors.white)),
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Whatsapp'),
     );
